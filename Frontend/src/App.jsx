@@ -30,7 +30,8 @@ function App() {
         <div className="container">
           <div className="left">
             <Editor
-              value={code ? code : "Write your code here"}
+              value={code}
+              placeholder="Write your code here..."
               onValueChange={(code) => setCode(code)}
               highlight={(code) =>
                 highlight(code, languages.javascript, "javascript")
