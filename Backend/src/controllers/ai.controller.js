@@ -7,6 +7,6 @@ module.exports.getReview = async (req,res)=>{
         return res.status(400).send("code is not given")
     }
 
-    const response = await aiservice.generateContent(prompt)
+    const response = await aiservice.generateContent(code)
     res.send(response)
 }
