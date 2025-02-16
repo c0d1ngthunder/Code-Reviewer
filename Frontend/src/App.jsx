@@ -5,6 +5,9 @@ import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
 import axios from "axios";
+import rehypeHighlight from "rehype-highlight"
+import "highlight.js/styles/github-dark.css"
+import Markdown from "react-markdown"
 
 function App() {
   useEffect(() => {
@@ -12,7 +15,7 @@ function App() {
   }, []);
 
 
-  const [code, setCode] = useState("function name(params){}");
+  const [code, setCode] = useState("");
   const [review,setReview] = useState("")
   
   async function getReview() {
@@ -27,7 +30,7 @@ function App() {
         <div className="container">
           <div className="left">
             <Editor
-              value={code}
+              value={code ? code : "Write your code here"}
               onValueChange={(code) => setCode(code)}
               highlight={(code) =>
                 highlight(code, languages.javascript, "javascript")
@@ -43,7 +46,9 @@ function App() {
             />
             <input onClick={getReview} type="button" value="Review" />
           </div>
-          <div className="right">{review}</div>
+          <div className="right"><Markdown
+          rehypePlugins={[rehypeHighlight]} 
+          >{review}</Markdown></div>
         </div>
       </main>
     </>
