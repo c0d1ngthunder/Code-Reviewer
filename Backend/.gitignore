@@ -1,0 +1,8 @@
+.env
+node_modules
+controllers
+routes
+models
+utils
+config
+services
