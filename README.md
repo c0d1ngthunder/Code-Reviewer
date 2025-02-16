@@ -1,6 +1,15 @@
 
 # Code Reviewer : Review your code with AI
 
+Code Reviewer is an AI-powered code review tool that uses Google's Gemini API to analyze code and provide improvement suggestions. It features syntax highlighting and presents reviews in a clean Markdown format.
+
+Key benefits:
+- Instant code feedback
+- Bug detection
+- Best practices guidance
+- Pre-review quality checks
+
+
 ## Tech Stack
 
 - React
