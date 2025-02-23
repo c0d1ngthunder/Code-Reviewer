@@ -14,7 +14,7 @@ function App() {
   const [review, setReview] = useState("");
 
   async function getReview() {
-    const response = await axios.post("http://localhost:3000/ai/get-review", {
+    const response = await axios.post("https://code-reviewer-dahx.onrender.com/ai/get-review", {
       code,
     });
     setReview(response.data);
