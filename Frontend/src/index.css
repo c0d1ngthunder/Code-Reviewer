@@ -20,15 +20,49 @@ main{
 
 .container{
   width: 100%;
-  height: calc(100vh - 90px);
+  height: 85vh;
   display: flex;
 }
+
+.right h1, .right h2, .right h3, .right p {
+  margin-bottom: 10px;
+}
+.right{
+  line-height: 30px;
+}
+
+.right li{
+  line-height: 40px;
+}
+
+.right pre {
+  background-color: #2d2d2d;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.right code {
+  font-family: "Fira Code", monospace;
+  background-color: #1e1e1e;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+
+.right ul, .right ol {
+  padding-left: 20px;
+}
+
 
 .left{
   width: 50%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
   border-radius: 30px;
 }
+
+
 
 h1{
   padding-bottom: 15px;
